@@ -1,0 +1,18 @@
+.categories {
+    width: 100%;
+    height: 100%;
+}
+
+.input_categories {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: 600;
+    margin: 50px 0 0 0;
+    width: 30%;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px #388e3c solid;
+    outline: none;
+    cursor: pointer;
+}
