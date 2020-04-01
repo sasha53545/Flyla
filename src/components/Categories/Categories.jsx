@@ -9,7 +9,8 @@ export class Categories extends React.Component {
 
         this.state = {
             categories: [],
-            category: 'Select category'
+            category: 'Select category',
+            list_of_categories: false
         };
     }
 
@@ -25,8 +26,15 @@ export class Categories extends React.Component {
 
     render() {
         return (
-            <div className={css.input_categories} onClick={() => <ListOfCategories categories={this.state.categories}/>}>
-                {this.state.category}
+            <div className={css.categories}>
+                <div className={css.input_categories}
+                     onClick={() => this.setState({list_of_categories: !this.state.list_of_categories})}>
+                    {this.state.category}
+                </div>
+                <div className={css.list_of_categories}>
+                    {this.state.list_of_categories && <ListOfCategories categories={this.state.categories}/>}
+                </div>
+
             </div>
         );
     }
